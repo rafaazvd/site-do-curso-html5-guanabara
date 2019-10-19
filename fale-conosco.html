@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF=8"/>
+    <title>tudo sobre google glass</title>
+    <link rel="stylesheet" type="text/css" href="_css/estilo.css"/>
+    <link rel="stylesheet" type="text/css" href="_css/form.css"/>
+    <script src="_javascript/funcoes.js"></script>
+</head>
+
+<body>
+<div id="interface">
+    <header id="cabecalho">
+    <hgroup>
+        <h1>Google Glass</h1>
+    <h2>A revolução do Google está chegando</h2>
+    </hgroup>
+    <img id="icone" src="_imagens/faleconosco.png">
+    <nav id="menu">
+    <h1>Menu Principal</h1>
+    <ul type="disc">
+    <li onmousemove="mudaFoto('_imagens/home.png')" onmouseout="mudaFoto('_imagens/faleconosco.png')"><a href="index.html">Home</a></li>
+    <li onmousemove="mudaFoto('_imagens/especificacoes.png')" onmouseout="mudaFoto('_imagens/faleconosco.png')"><a href="specs.html">Especificações</a></li>
+    <li onmousemove="mudaFoto('_imagens/fotos.png')" onmouseout="mudaFoto('_imagens/faleconosco.png')"><a href="fotos.html">Fotos</a></li>
+    <li onmousemove="mudaFoto('_imagens/multimidia.png')" onmouseout="mudaFoto('_imagens/faleconosco.png')"><a href="multimidia.html">Multimídia</a></li>
+    <li onmousemove="mudaFoto('_imagens/faleconosco.png')" onmouseout="mudaFoto('_imagens/faleconosco.png')"><a href="fale-conosco.html">Fale conosco</a></li>
+    </ul></nav>
+    </header>
+<section id="corpo-full"><article id="noticia-principal"><header id="cabecalho-artigo"><hgroup>
+<h3>Fale Conosco > Contato</h3>
+<h1>Formulário de Contato</h1>
+<h2>por Rafael Azevedo</h2>
+<h3 class="direita">Atualizado em 01/julho/2019</h3>
+</hgroup></header>
+<form method="post" id="fcontato" action="mailto:contato@meuemail.com" oninput="calc_total()">
+    <fieldset id="usuario">
+    <legend>Identificação do Usuário</legend>
+    <p><label for="cnome">Nome: <input type="text" name="tnome" id="cnome" size="30" maxlength="30" placeholder="Nome Completo"></p></label>
+    <p>Senha: <input type="password" name="tsenha" id="csenha" size="20" maxlength="20" placeholder="passwd"></p>
+    <p><label for="cemail">E-mail:<input type="email" name="temail" id="cemail" size="30" maxlength="40" placeholder="Email"></p></label>
+    <fieldset id="sexo"><legend>Sexo</legend>
+        <p><input type="radio" name="tsexo" id="cmasc"> <label for="cmasc">Masculino</label></p>
+       <p><input type="radio" name="tsexo" id="cfem"> <label for="cfem">Feminino</label> </fieldset></p>
+    <p><label for="cnasc">Data de Nascimento:<input type="Date" name="tnasc" id="cnasc"></p>
+    </label>
+</fieldset>
+    <fieldset id="endereco">
+<legend>Endereço do Usuário</legend>
+<p><label for="clog">Logradouro:<input type="text" name="tlog" id="clog" size="30" maxlength="40" placeholder="rua.. av.. lote.."></p></label>
+<p><label for="cnum">Número: <input type="number" name="tnum" id="cnum" min="1" max="999999"></p></label>
+<p><label for="cEst">Estado:</label><select name="tEst" id="cEst">
+    <option value="ap">amapa</option>
+    <option value="sc">santa catarina</option>
+</select></p>
+<p><label for="ccid">Cidade: <input type="text" name="tcid" id="ccid" size="30" maxlength="40" list="cidades"></p></label>
+<datalist id="cidades">
+    <option value="santana"></option>
+    <option value="chapecó"></option>
+    <option value="macapá"></option>
+    <option value="florianópoles"></option>
+</datalist>
+</fieldset>
+    <fieldset id="mensagem">
+    <legend>Mensagem do Usuário</legend>
+    <p><label for="curg">Grau de Urgência:</label>
+        min<input type="range" name="turg" id="curg" min="0" max="10">max</p>
+    <p><label for="cmsg">Mensagem:</label>
+        <textarea name="tmsg" id="cmsg" cols="35" rows="3"></textarea></p><br><br><br><br>
+</fieldset>
+    <fieldset id="pedido">
+    <legend>Quero um Google Glass</legend>
+
+    <p><input type="checkbox" name="tped" id="cped" checked><label for="cped">Gostaria de adquirir um Google Glass quando disponível</label></p>
+
+    <p><label for="ccor"> Cor:</label><input type="color" name="tcor" id="ccor" value="#0000FF"></p>
+
+    <p><label for="cqtd">Quantidade:</label><input type="number" name="tqtd" id="cqtd" min="1" max="9999" value="1"></p>
+    <p><label for="cpt">Preço Total: R$</label><input type="text" name="tpt" id="cpt" placeholder="total a pagar" value="" readonly></p> 
+ </fieldset>
+
+<!-- input type="submit" value ="enviaar" -->
+<input type="image" name="tenviar" src="_imagens/botao-enviar.png">
+</form>
+</article></section>
+<footer id="rodape">
+<p>Copyright &copy;2019 - by <span style="color: violet; color: slateblue;">Rafael Azevedo</span><p><br>
+<p>Facebook | Twitter<p></footer>
+</div>
+</body>
+</html>
